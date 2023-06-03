@@ -11,7 +11,7 @@ export default {
 
     const token = context.rootGetters.token
 
-    const response = await fetch(`https://find-a-coach-23695-default-rtdb.firebaseio.com/coaches/${userId}.json?auth=${token}`, {
+    const response = await fetch(``, {
       method: 'PUT',
       body: JSON.stringify(coachData)
     })
@@ -30,7 +30,7 @@ export default {
       return
     }
 
-    const response = await fetch('https://find-a-coach-23695-default-rtdb.firebaseio.com/coaches.json')
+    const response = await fetch('')
     const responseData = await response.json()
 
     if (!response.ok) {
